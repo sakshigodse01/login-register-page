@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main"> 
+        <input type="checkbox"  id="chk" aria-hidden="true">
+
+        <div class="signup" id="sign">
+           
+            <form action="/">
+                <label for="chk">Register </label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+               <input type="tel" name="mob_num" id="mobile" placeholder="Mobile" required>
+                <input type="password" name="pass" id="password" placeholder="Password" required>
+                <input type="password" name="rety_pass" id="rety_password" placeholder="Repeat Password" required>
+                <button>Register</button>
+                <h4>Already have account "Login"</h4>
+            </form>
+           
+        </div>  
+        <div class="login" id="log">
+            
+            <form action="/">
+                <label for="chk">Login </label>
+                <input type="text" name="uname" id="username" placeholder="Username" required>
+                <input type="password" name="pass" id="password" placeholder="Password" required>
+                <button>Login</button>
+                <h4>Don't have account "Register"</h4>
+            </form>
+           
+        </div>
+    </div>
+    
+    
+</body>
+</html>

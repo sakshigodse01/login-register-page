@@ -1,0 +1,181 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main{
+    width: 450px;
+    height: 550px;
+    background: rgb(127, 241, 175);
+    border-radius: 20px;
+    box-shadow: 5px 10px 20px #575656;
+    overflow: hidden;
+}
+
+#chk{
+    display: none;
+}
+.signup{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.signup h4{
+    margin-top: -10px;
+    text-align: center;
+    padding: 20px;
+}
+
+label{
+    color: white;
+    font-size: 60px;
+    justify-content: center;
+    display: flex;  
+    margin: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    /* transition on both login and register labels after they are comes front and goes back */
+    transition: .5s ease-in-out;
+}
+
+input{
+    width: 60%;
+    height: 25px;
+    background: white;
+    justify-content: center;
+    display: flex;
+    margin: 13px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+}
+button{
+    width: 65%;
+    height: 40px;
+    margin: 15px auto;
+    justify-content: center;
+    display: block;
+    color: white;
+    background-color: rgb(85, 33, 134);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 25px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 5px 10px 20px black;
+}
+
+button:hover{
+    background-color: rgb(7, 107, 124);
+}
+
+.login{
+    margin-top: 60px;
+    height: 600px;
+    padding-top: 40px;
+    background-color: #eee;
+    border-radius: 50% / 20%;
+    
+    /* login class form is set at bottom of Yaxis at negative 180px from origin*/
+    transform: translateY(-180px);
+    /* transition on login class when it comes up and goes down  with .8secondes duration time*/
+    transition: 0.8s ease-in-out;
+}
+
+.login label{
+    margin-top: -20px;
+    color: purple;
+    /* login text size decreases when register class is active  */
+    transform: scale(.6);
+}
+
+.login h4{
+    text-align: center;
+    padding: 20px;
+}
+
+/* As checkbox is checked login class translate/float upside in Yaxis */
+#chk:checked ~ .login{
+    transform: translateY(-500px);
+}
+
+/* As checkbox is checked login text increases and register text decreases .
+on click of Login checkbox gets checked and on click of register checkbox is unchecked*/
+#chk:checked ~ .login label{
+    transform: scale(1);  
+}
+
+#chk:checked ~ .signup label{
+    transform: scale(.6); 
+}
+
+
+
+@media screen and (max-width:480px){
+    .main{width: 350px;
+    height: 430px;
+    background: rgb(127, 241, 175);
+    border-radius: 20px;
+    box-shadow: 5px 10px 20px #575656;
+    overflow: hidden;
+}
+input {
+    width: 60%;
+    height: 15px;
+    background: white;
+    justify-content: center;
+    display: flex;
+    margin: 13px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+}
+label {
+    color: white;
+    font-size: 50px;
+    justify-content: center;
+    display: flex;
+    margin: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: .5s ease-in-out;
+}
+
+button {
+    width: 70%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: white;
+    background-color: rgb(85, 33, 134);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 5px 10px 20px black;
+}
+
+.login {
+    margin-top: 105px;
+    height: 608px;
+    padding-top: 25px;
+    background-color: #eee;
+    border-radius: 50% / 20%;
+    transform: translateY(-180px);
+    transition: 0.8s ease-in-out;
+}
+}
